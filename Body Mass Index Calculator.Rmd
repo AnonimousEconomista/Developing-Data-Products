@@ -1,0 +1,52 @@
+---
+title: "Body Mass Index Calculator"
+date: "28 9 2019"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Body Mass Index Calculator
+
+
+This presentation documents the shinyApp **Body Mass Index Calculator** created for week 4's assignment on Coursera's Developing Data Products Module.
+
+The basic version of the Body Mass Index relates body weight to height and is only indicative of physical health, as it doesn't take into account gender, age and other factors.
+
+## This is how it works
+
+1. Enter your weight in kg in the first slider.
+2. Enter your height in cm in the second slider.
+3. Your body mass index (bmi) is displayed on the right-hand side panel.
+
+Example: Assuming your height is 175 cm and your weight is 73 kg, your bmi is computed as follows:
+
+```{r bmi, echo = TRUE}
+height<-175
+weight <-73
+bmi<- (weight/height^2)*10000
+bmi
+```
+
+## BMI Range
+The BMI calculator allows you to submit your range, revealing in what status your anthropometric data places you, among the following categories:
+
+- severely underweight (BMI below 16)
+- underweight (BMI between 16 and 18.5)
+- healthy weight (BMI between 18.5 and 25)
+- overweight (BMI between 25 and 30)
+- obese (above 30)
+
+## Sources
+
+The technical background information on the body mass index and its calculation used to create this simple shiny app was gathered from the following wikipedia article:
+
+https://en.wikipedia.org/wiki/Body_mass_index 
+
+
+
+Thank you for reviewing this assignment!
+
+
